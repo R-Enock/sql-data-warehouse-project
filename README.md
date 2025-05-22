@@ -1,2 +1,2 @@
 # sql-data-warehouse-project
-Building a modern of data warehouse with SQL server, including ETL process, data modelling and analytics 
+This is the first project in data warehouse that I am going to work on. I am very excitted to takle on this project as I move forward to my new carrier. This is truely a blessing over all. THis is also a ste by step by Data with Bara pn sql. I have learnt a lot with him and I like the journey. 
