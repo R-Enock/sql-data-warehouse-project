@@ -138,7 +138,7 @@ BEGIN TRY
 			PRINT 'ERROR message' + CAST(ERROR_STATE() AS NVARCHAR);
 			PRINT '============================================================';
 	END CATCH
-END
+END;
 
-EXEC bronze.load_bronze
+EXEC bronze.load_bronze;
 
