@@ -1,17 +1,17 @@
 /*
 =====================================================================================================================
-DDL Script: Create Bronze Tables
+DDL Script: Create silver Tables
 =====================================================================================================================
 Script Purpose:
-	This scirpt creates tables in the 'bronze' schema, dropping existing tables if any.
-	Run this script to redefine the DDL structure of 'bronze' Tables
+	This scirpt creates tables in the 'silver' schema, dropping existing tables if any.
+	Run this script to redefine the DDL structure of 'silver' Tables
 ========================================================================================================================
 */
 
 
-IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL 
-	DROP TABLE bronze.crm_cust_info;
-CREATE TABLE Bronze.crm_cust_info (
+IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL 
+	DROP TABLE silver.crm_cust_info;
+CREATE TABLE silver.crm_cust_info (
 	cst_id INT,
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
@@ -21,9 +21,9 @@ CREATE TABLE Bronze.crm_cust_info (
 	cst_create_date DATE,
   dwh_create_date DATETIME DEFAULT GETDATE()
 );
-IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL 
-	DROP TABLE bronze.crm_prd_info;
-CREATE TABLE bronze.crm_prd_info(
+IF OBJECT_ID('silver.crm_prd_info', 'U') IS NOT NULL 
+	DROP TABLE silver.crm_prd_info;
+CREATE TABLE silver.crm_prd_info(
 	prd_id		INT, 
 	prd_key		NVARCHAR(50),
 	prd_nm		NVARCHAR(50),
@@ -33,9 +33,9 @@ CREATE TABLE bronze.crm_prd_info(
 	prd_end_dt	DATETIME,
   dwh_create_date DATETIME DEFAULT GETDATE()
 );
-IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL 
-	DROP TABLE bronze.crm_sales_details;
-CREATE TABLE bronze.crm_sales_details (
+IF OBJECT_ID('silver.crm_sales_details', 'U') IS NOT NULL 
+	DROP TABLE silver.crm_sales_details;
+CREATE TABLE silver.crm_sales_details (
 	sls_ord_num NVARCHAR (50),
 	sls_prd_key NVARCHAR (50),
 	sls_cust_id INT,
@@ -47,24 +47,24 @@ CREATE TABLE bronze.crm_sales_details (
 	sls_price INT,
   dwh_create_date DATETIME DEFAULT GETDATE()
 ); 
-IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL 
-	DROP TABLE bronze.erp_loc_a101;
-CREATE TABLE bronze.erp_loc_a101(
+IF OBJECT_ID('silver.erp_loc_a101', 'U') IS NOT NULL 
+	DROP TABLE silver.erp_loc_a101;
+CREATE TABLE silver.erp_loc_a101(
 	cid   NVARCHAR(50),
 	cntry NVARCHAR(50),
   dwh_create_date DATETIME DEFAULT GETDATE()
 );
-IF OBJECT_ID('bronze.erp_cust_a212', 'U') IS NOT NULL 
-	DROP TABLE bronze.erp_cust_a212;
-CREATE TABLE bronze.erp_cust_a212(
+IF OBJECT_ID('silver.erp_cust_a212', 'U') IS NOT NULL 
+	DROP TABLE silver.erp_cust_a212;
+CREATE TABLE silver.erp_cust_a212(
 	cid NVARCHAR(50),
 	bdate DATE,
 	gen NVARCHAR (50),
   dwh_create_date DATETIME DEFAULT GETDATE()
 );
-IF OBJECT_ID('bronze.epr_pxt_cat_g1v2', 'U') IS NOT NULL 
-	DROP TABLE bronze.epr_pxt_cat_g1v2;
-CREATE TABLE bronze.epr_pxt_cat_g1v2(
+IF OBJECT_ID('silver.epr_pxt_cat_g1v2', 'U') IS NOT NULL 
+	DROP TABLE silver.epr_pxt_cat_g1v2;
+CREATE TABLE silver.epr_pxt_cat_g1v2(
 	id			NVARCHAR(50),
 	cat			NVARCHAR(50),
 	subcat		NVARCHAR(50),
