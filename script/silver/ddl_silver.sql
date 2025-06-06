@@ -65,8 +65,8 @@ CREATE TABLE silver.erp_cust_a212(
 IF OBJECT_ID('silver.epr_pxt_cat_g1v2', 'U') IS NOT NULL 
 	DROP TABLE silver.epr_pxt_cat_g1v2;
 CREATE TABLE silver.epr_pxt_cat_g1v2(
-	id			NVARCHAR(50),
-	cat			NVARCHAR(50),
+	id		NVARCHAR(50),
+	cat		NVARCHAR(50),
 	subcat		NVARCHAR(50),
 	maintence	NVARCHAR(50),
   dwh_create_date DATETIME DEFAULT GETDATE()
